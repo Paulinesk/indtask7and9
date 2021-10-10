@@ -1,0 +1,26 @@
+function c(A, D): 
+if A= D/(2**1/2)
+then
+   return "Да, можно"
+else
+   return "Нет, нельзя"
+end function
+
+begin
+while True
+	try
+		D = int(input("Диаметр бревна: "))
+		if D < 0
+                then
+		    raise Exception()
+		A = int(input("Ширина бруса: "))
+		if A < 0
+                then
+		    raise Exception()
+		else
+		    print (c(A, D))
+	except
+		print("Введите натуральное число.")
+		continue
+	break
+end
